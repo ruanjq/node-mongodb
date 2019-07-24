@@ -53,7 +53,7 @@
     │      default.png  
     |     
     └─views  // 模板路径
-	```
+```
 
 ### 启动运行
 - npm run start  开发+编译模式
