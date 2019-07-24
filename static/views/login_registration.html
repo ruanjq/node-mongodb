@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Template Name: Clip-Two - Responsive Admin Template build with Twitter Bootstrap 3.x | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+	<!--<![endif]-->
+	<!-- start: HEAD -->
+	<!-- start: HEAD -->
+	<head>
+		<? include includes/public_head.html ?>
+	</head>
+	<!-- end: HEAD -->
+	<!-- start: BODY -->
+	<body class="login">
+		<!-- start: REGISTRATION -->
+		<div class="row">
+			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+				<!-- start: REGISTER BOX -->
+				<div class="box-register">
+					<form class="form-register" id="J_signupForm" enctype="multipart/form-data">
+						<fieldset>
+							<legend>
+								Sign Up
+							</legend>
+							<p>
+								Enter your personal details below:
+							</p>
+							<div class="form-group">
+								<label for="username"> 用户名 </label>
+								<span class="input-icon"><input type="text" class="form-control" name="username" id="username" placeholder="username"><i class="fa fa-user"></i></span>
+							</div>
+							<div class="form-group">
+								<label for="email"> 邮箱地址 </label>
+								<span class="input-icon">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+									<i class="fa fa-envelope"></i> </span>
+							</div>
+							<div class="form-group">
+								<label for="pwd"> 密码 </label>
+								<span class="input-icon">
+									<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+									<i class="fa fa-lock"></i> </span>
+							</div>
+							<div class="form-group">
+								<label for="password_again"> 密码 </label>
+								<span class="input-icon">
+									<input type="password" class="form-control" id="password_again" name="password_again" placeholder="Password Again">
+									<i class="fa fa-lock"></i> </span>
+							</div>
+							<div class="form-group">
+								<label for="J_datepicker"> 出生日期 </label>
+								<span class="input-icon"><input type="text" class="form-control datepicker" id="J_datepicker" name="birthday"  placeholder="birthday"><i class="fa fa-calendar"></i></span>
+							</div>
+							<div class="form-group">
+								<label class="block">
+									性别
+								</label>
+								<div class="clip-radio radio-primary">
+									<input type="radio" checked id="rg-female" name="sex" value=1>
+									<label for="rg-female">
+										男
+									</label>
+									<input type="radio" id="rg-male" name="sex" value=0>
+									<label for="rg-male">
+										女
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="avatar"> 头像 </label>
+								<input type="file" name="avatar">
+							</div>
+							
+							
+							<div class="form-actions">
+								<p>
+									Already have an account?
+									<a href="/user/login">
+										Log-in
+									</a>
+								</p>
+								<button type="submit" class="btn btn-primary pull-right">
+									Submit <i class="fa fa-arrow-circle-right"></i>
+								</button>
+							</div>
+							<div class="has-error">
+								<p class="help-block" id="J_signupMsg"></p>
+							</div>
+						</fieldset>
+					</form>
+					<!-- start: COPYRIGHT -->
+					<div class="copyright">
+						&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> ClipTheme</span>. <span>All rights reserved</span>
+					</div>
+					<!-- end: COPYRIGHT -->
+				</div>
+				<!-- end: REGISTER BOX -->
+			</div>
+		</div>
+		<!-- end: REGISTRATION -->
+		
+
+		
+		<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+		<script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+		<script src="/vendor/jquery-validation/jquery.validate.min.js"></script>
+		<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+		<!-- start: CLIP-TWO JAVASCRIPTS -->
+		<script src="/assets/js/main.js"></script>
+		<!-- start: JavaScript Event Handlers for this page -->
+		<script src="/assets/js/login.js"></script>
+		<script>
+			jQuery(document).ready(function() {
+				Login.init();
+			});
+		</script>
+		<!-- end: JavaScript Event Handlers for this page -->
+		<!-- end: CLIP-TWO JAVASCRIPTS -->
+	</body>
+	<!-- end: BODY -->
+</html>

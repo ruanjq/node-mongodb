@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default={DOMAIN:global.DOMAIN="10.32.2.219",PORT:8881};
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbmZpZy9jb25maWcuZGV2LmpzIl0sIm5hbWVzIjpbIkRPTUFJTiIsImdsb2JhbCIsIlBPUlQiXSwibWFwcGluZ3MiOiJxRkFHQ0EsT0FBT0MsT0FBT0QsT0FBUyxjQUN2QkUsS0FBSyIsImZpbGUiOiJjb25maWcvY29uZmlnLmRldi5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5cclxuZXhwb3J0IGRlZmF1bHQge1xyXG5cdERPTUFJTjpnbG9iYWwuRE9NQUlOID0gJzEwLjMyLjIuMjMxJyxcclxuXHRQT1JUOjg4ODFcclxufSJdfQ==

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Template Name: Clip-Two - Responsive Admin Template build with Twitter Bootstrap 3.x | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+	<!--<![endif]-->
+	<!-- start: HEAD -->
+	<head>
+		<? include includes/public_head.html ?>
+	</head>
+	<!-- end: HEAD -->
+	<body>
+		<div id="app">
+			<!-- sidebar -->
+			<? include includes/sidebar_left.html ?>
+			<!-- / sidebar -->
+			<div class="app-content">
+				<!-- start: TOP NAVBAR -->
+				<? include includes/public_header.html ?>
+				<!-- end: TOP NAVBAR -->
+				<div class="main-content" >
+					<div class="wrap-content container" id="container">
+						<!-- start: PAGE TITLE -->
+						<section id="page-title">
+							<div class="row">
+								<div class="col-sm-8">
+									<h1 class="mainTitle">菜单列表</h1>
+								</div>
+								<ol class="breadcrumb">
+									<li>
+										<span>Tables</span>
+									</li>
+									<li class="active">
+										<span>Basic Tables</span>
+									</li>
+								</ol>
+							</div>
+						</section>
+						<!-- end: PAGE TITLE -->
+						 
+						
+						
+						 
+						<!-- start: STRIPED ROWS -->
+						<div class="container-fluid container-fullw">
+							<div class="row buttons-widget">
+							<div class="col-md-12 margin-bottom-15">
+								<a class="btn btn-wide btn-primary" href="/menu/add">
+										<i class="ti-plus"></i>
+										添加菜单
+									</a>
+							</div>
+						</div> 
+							<div class="row">
+								<div class="col-md-12">
+									
+									<table class="table table-striped table-hover" id="sample-table-2">
+										<thead>
+											<tr>
+												<th class="center">ID</th>
+												<th class="center">菜单名称</th>
+					                            <th class="hidden-xs center">一级菜单</th>
+					                            <th class="center">二级菜单</th>
+					                            <th class="hidden-xs center">模板文件</th>
+					                            <th class="hidden-xs center">路由名称</th>
+					                            <th class="center">操作</th>
+											</tr>
+										</thead>
+									<!-- 	<tbody>
+										<? menuList.forEach(function(item,index){ ?>
+														                        <tr>
+														                            <td class="center"> <?=item.menu_id?> </td>
+														                            <td class="center"><?=item.menu_name?></td>
+														                            <td class="hidden-xs center"><?=item.menu_parent_1?></td>
+														                            <td class="center"><?=item.menu_parent_2?></td>
+														                            <td class="hidden-xs center"><?=item.template?></td>
+														                            <td class="hidden-xs center"><?=item.router?></td>
+														                            <td class="center">
+														                            	<div class="visible-md visible-lg hidden-sm hidden-xs">
+													<a href="#" class="btn btn-transparent btn-xs" tooltip-placement="top" tooltip="Edit"><i class="fa fa-pencil"></i></a>
+													<a href="#" class="btn btn-transparent btn-xs tooltips" tooltip-placement="top" tooltip="Share"><i class="fa fa-share"></i></a>
+													<a href="/menu/remove/<?=item['menu_id']?>" title="删除菜单" class="btn btn-transparent btn-xs tooltips text-red" tooltip-placement="top" tooltip="Remove"><i class="fa fa-times fa fa-white"></i></a>
+												</div>
+														                            </td> 
+														                        </tr>
+														                        <? }) ?>
+									</tbody> -->
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- end: STRIPED ROWS -->
+					</div>
+				</div>
+			</div>
+			<!-- start: FOOTER -->
+			<footer>
+				<div class="footer-inner">
+					<div class="pull-left">
+						&copy; <span class="current-year"></span><span class="text-bold text-uppercase">ClipTheme</span>. <span>All rights reserved</span>
+					</div>
+					<div class="pull-right">
+						<span class="go-top"><i class="ti-angle-up"></i></span>
+					</div>
+				</div>
+			</footer>
+			<!-- end: FOOTER -->
+		</div>
+		
+		<!-- start: CLIP-TWO JAVASCRIPTS -->
+		<script src="/assets/js/main.js"></script>
+		<!-- start: JavaScript Event Handlers for this page -->
+		<script>
+			jQuery(document).ready(function() {
+				Main.init();
+			});
+		</script>
+		<!-- end: JavaScript Event Handlers for this page -->
+		<!-- end: CLIP-TWO JAVASCRIPTS -->
+	</body>
+</html>

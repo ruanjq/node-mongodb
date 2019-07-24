@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Template Name: Clip-Two - Responsive Admin Template build with Twitter Bootstrap 3.x | Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- start: HEAD -->
+
+<head>
+    <? include includes/public_head.html ?>
+</head>
+<!-- end: HEAD -->
+
+<body>
+    <div id="app">
+        <!-- sidebar -->
+        <? include includes/sidebar_left.html ?>
+            <!-- / sidebar -->
+            <div class="app-content">
+                <!-- start: TOP NAVBAR -->
+                <? include includes/public_header.html ?>
+                    <!-- end: TOP NAVBAR -->
+                    <div class="main-content">
+                        <div class="wrap-content container" id="container">
+                            <!-- start: PAGE TITLE -->
+                            <section id="page-title">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <h1 class="mainTitle">添加菜单</h1>
+                                    </div>
+                                    <ol class="breadcrumb">
+                                        <li>
+                                            <span>Tables</span>
+                                        </li>
+                                        <li class="active">
+                                            <span>Basic Tables</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </section>
+                            <!-- end: PAGE TITLE -->
+                            <!-- start: STRIPED ROWS -->
+                            <div class="container-fluid container-fullw">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <form role="form" method="post" action="/menu/add">
+                                            <div class="form-group">
+                                                <label for="menu_name">
+                                                    菜单名称
+                                                </label>
+                                                <input type="text" name="menu_name" class="form-control" id="menu_name" placeholder="菜单名称">
+                                            </div>
+                                            <div class="form-group">
+                                            	<label>菜单类型</label>
+                                            	<div>
+                                            		<div class="radio clip-radio radio-primary radio-inline">
+														<input type="radio" id="level1" name="menu_level" value="1"  checked="checked">
+														<label for="level1">
+															一级菜单
+														</label>
+													</div>
+													<div class="radio clip-radio radio-primary radio-inline">
+														<input type="radio" id="level2" name="menu_level" value="2">
+														<label for="level2">
+															二级菜单
+														</label>
+													</div>
+													<div class="radio clip-radio radio-primary radio-inline">
+														<input type="radio" id="level3" name="menu_level" value="3">
+														<label for="level3">
+															三级菜单
+														</label>
+													</div>
+                                            	</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="menu_parent_1">
+                                                    一级菜单
+                                                </label>
+                                                <select id="menu_parent_1" name="menu_parent_1" class="form-control">
+														<option value="1">1</option>	
+														<option value="2">2</option>	
+												</select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="menu_parent_2">
+                                                    二级菜单
+                                                </label>
+                                                <select id="menu_parent_2" name="menu_parent_2" class="form-control">
+														<option value="1">1</option>	
+														<option value="2">2</option>	
+												</select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="router">
+                                                    路由名称
+                                                </label>
+                                                <input type="text" class="form-control" name="router" id="router" placeholder="路由名称">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="template">
+                                                    模板文件
+                                                </label>
+                                                <input type="text" class="form-control" name="template" id="template" placeholder="模板文件">
+                                            </div>
+                                            
+                                            <div class="form-group margin-top-30">
+                                            	<button type="submit" class="btn btn-o btn-primary">
+	                                                保 存
+	                                            </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- end: STRIPED ROWS -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- start: FOOTER -->
+                    <footer>
+                        <div class="footer-inner">
+                            <div class="pull-left">
+                                &copy; <span class="current-year"></span><span class="text-bold text-uppercase">ClipTheme</span>. <span>All rights reserved</span>
+                            </div>
+                            <div class="pull-right">
+                                <span class="go-top"><i class="ti-angle-up"></i></span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- end: FOOTER -->
+            </div>
+            <!-- start: CLIP-TWO JAVASCRIPTS -->
+            <script src="/assets/js/main.js"></script>
+            <!-- start: JavaScript Event Handlers for this page -->
+            <script>
+            jQuery(document).ready(function() {
+                Main.init();
+            });
+            </script>
+            <!-- end: JavaScript Event Handlers for this page -->
+            <!-- end: CLIP-TWO JAVASCRIPTS -->
+</body>
+
+</html>

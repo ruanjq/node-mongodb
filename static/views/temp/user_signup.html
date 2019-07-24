@@ -1,0 +1,101 @@
+<html lang="zh-CN">
+
+<head>
+    <? include includes/public_head.html ?>
+</head>
+
+<body>
+    <div class="login-body">
+        <div class="container login-form-wrap">
+            <div class="row clearfix">
+                <div class="col-md-4 column">
+                </div>
+                <div class="col-md-4 column">
+                    <h3>
+                        hello,欢迎注册！
+                    </h3>
+                    <br>
+                    <form role="form" action="/add/user" enctype="multipart/form-data" id="J_signupForm" method="POST" data-toggle="validator">
+                        <div class="form-group">
+                            <label for="username" class="control-label">用户名</label>
+                            <input type="text" required name="username" data-error="用户名不为空" class="form-control" id="username" placeholder="用户名">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">性别</label>
+                            <div>
+                                <label class="radio-inline">
+                                    <input type="radio" checked name="sex" id="sex1" value="1"> 男
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="sex" id="sex0" value="0"> 女
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd" class="control-label">密码</label>
+                            <input type="password" name="pwd" data-error="密码不为空" required class="form-control" id="pwd" placeholder="输入密码">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday" class="control-label">生 日</label>
+                            <input type="text" class="form-control" required data-error="生日不为空" name="birthday" id="birthday" placeholder="输入生日">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="avatar">头像</label>
+                            <input type="file" name="avatar" id="avatar">
+                            <p class="help-block">选择头像</p>
+                        </div>
+                        <p class="text text-danger" id="J_signupMsg"></p>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default btn-success btn-block">注 册</a>
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-default btn-primary btn-block" href="/user/login">登 录</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 column">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        let config = {
+            locale: 'zh-cn',
+            disabledDates: [],
+            format: 'YYYY-MM-DD'
+        };
+        $("#birthday").datetimepicker(config);
+
+        $("#J_signupForm").validator().on('submit', function(e) {
+            if (e.isDefaultPrevented()) {
+                // handle the invalid form...
+            } else {
+                // everything looks good!
+                e.preventDefault();
+               
+                $.ajax({
+                    url: "/add/user",
+                    type: "post",
+                    processData: false,
+                    contentType: false,
+                    data: new FormData($('#J_signupForm')[0]),
+                    success: function(res) {
+                        if (res.status === 1) {
+                            window.location.href = "/";
+                        } else {
+                            $("#J_signupMsg").html(res.msg);
+                        }
+                    }
+                });
+
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>

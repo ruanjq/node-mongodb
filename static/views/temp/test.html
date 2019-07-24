@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="https://css.rowcdn.com/imagecache/MRW/minjs/jquery-2.1.0_moblie-lab_2.0.3.min.js?v=242dc43323"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    $(function() {
+
+
+        function getData() {
+        	return new Promise((resolve, reject) => {
+        		setTimeout(function(){
+					console.log("异步执行");
+					resolve("哈哈");
+				}, 1000)
+        	});
+        }
+
+        (async function(){
+        	var a = await getData();
+        	console.log(a);
+        })
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<html lang="zh-CN">
+
+<head>
+    <? include includes/public_head.html ?>
+</head>
+
+<body>
+    <? include includes/public_top.html ?>
+    <div class="jumbotron">
+        <div class="container  navbar-fixed-top-mt">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>用户名</th>
+                            <th>密码</th>
+                            <th width="100">性别</th>
+                            <th>生日</th>
+                            <th>头像</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <? userList.forEach(function(item,index){ ?>
+                        <tr>
+                            <td>
+                                <?=index?>
+                            </td>
+                            <td>
+                                <?=item.username?>
+                            </td>
+                            <td>
+                                <?=item.pwd?>
+                            </td>
+                            <td>
+                                <?= item.sex == '1' ? '男' : '女'?>
+                            </td>
+                            <td>
+                                <?= toolsFun.dataFormat(item.birthday,'YYYY/MM/dd') ?>
+                            </td>
+                            <td>
+                                <img src="<?=item.avatar?>" width="80">
+                            </td>
+                            <td>
+                                <a href="/user/remove/<?=item['_id']?>"  class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除</a>
+                            </td> 
+                        </tr>
+                        <? }) ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

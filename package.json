@@ -1,0 +1,43 @@
+{
+  "name": "node-mongodb",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "set NODE_ENV=development && nodemon ./dist/app.js",
+    "watch": "gulp watch",
+    "start": "concurrently \"npm run dev\" \"npm run watch\"",
+    "build": "rimraf ./dist && gulp bundle",
+    "server": "set NODE_ENV=product && node ./dist/app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "^2.5.7",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "concurrently": "^3.5.0",
+    "connect-mongo": "^2.0.0",
+    "express-session": "^1.15.6",
+    "file-stream-rotator": "^0.2.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "md5": "^2.2.1",
+    "mongoose": "^4.12.1",
+    "mongoose-auto-increment": "^5.0.1",
+    "multer": "^1.3.0",
+    "rimraf": "^2.6.2",
+    "session-file-store": "^1.1.2"
+  }
+}

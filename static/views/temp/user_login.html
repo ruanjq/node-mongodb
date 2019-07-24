@@ -1,0 +1,64 @@
+<html lang="zh-CN">
+
+<head>
+    <? include includes/public_head.html ?>
+</head>
+
+<body>
+    <div class="login-body">
+        <div class="container login-form-wrap">
+            <div class="row clearfix">
+                <div class="col-md-4 column">
+                </div>
+                <div class="col-md-4 column">
+                    <h3>
+                        hello,欢迎登录！
+                    </h3>
+                    <br>
+                    <form  id="J_loginForm" method="post" action="/signin" role="form" data-toggle="validator">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">用户名</label>
+                            <input type="text" placeholder="username" required data-error="用户名不为空" id="exampleInputEmail1" name="username" class="form-control">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密 码</label>
+                            <input type="password" placeholder="pwd" required data-error="密码不为空" id="exampleInputPassword1" name="pwd" class="form-control">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <br>
+                        <p class="text text-danger" id="J_loginMsg"></p>
+                        <button type="submit" id="J_login" class="btn btn-default btn-primary btn-block">登 录</button>
+                        <br>
+                        <a class="btn btn-default btn-success btn-block" href="/user/signup">注 册</a>
+                    </form>
+                </div>
+                <div class="col-md-4 column">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        
+        $("#J_loginForm").validator().on('submit', function(e) {
+            if (e.isDefaultPrevented()) {
+                // handle the invalid form...
+            } else {
+                // everything looks good!
+                e.preventDefault();
+                $.post("/signin",$(this).serialize(),function(res){
+                    if(res.status === 1){
+                        window.location.href = "/";
+                    } else{
+                        $("#J_loginMsg").html(res.msg);
+                    }
+                });
+                
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>
